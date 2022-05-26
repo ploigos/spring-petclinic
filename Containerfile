@@ -1,4 +1,3 @@
-#NOTE: maybe replace this image with a TSSC openjdk image if such a thing ever needs to exist
 FROM registry.access.redhat.com/ubi8/openjdk-11
 
 USER 0
