@@ -3,6 +3,8 @@
 name: spring-petclinic
 #test
 on:
+  schedule:
+  - cron: '*/15 * * * *' # every 15 minutes
   push:
   pull_request_target:
     types:
