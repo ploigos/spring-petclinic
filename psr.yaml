@@ -27,7 +27,7 @@ step-runner-config:
   - implementer: ArgoCDDeploy
     config:
       argocd-api: openshift-gitops-server-openshift-gitops.apps.swfocp.sandbox204.opentlc.com
-      argocd-username: adminoc
+      argocd-username: admin
       argocd-skip-tls: True
       deployment-config-repo: https://github.com/ploigos/spring-petclinic-ops.git
       deployment-config-helm-chart-path: charts/spring-petclinic-deploy
