@@ -1,6 +1,9 @@
 ---
 step-runner-config:
 
+  config-decryptors:
+    - implementer: ObfuscationDefaults
+
   global-defaults:
     organization: ploigos
     service-name: petclinic
