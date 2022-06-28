@@ -16,12 +16,15 @@ step-runner-config:
 
   create-container-image:
   - implementer: Buildah
+    config:
+      tls-verify: false
 
   push-container-image:
   - implementer: Skopeo
     config:
       destination-url: artifactory.artifactory.svc:8081/container
       container-image-push-repository: spring-petclinic
+      tls-verify: false
 
   deploy:
   - implementer: ArgoCDDeploy
