@@ -24,7 +24,7 @@ step-runner-config:
     config:
       destination-url: artifactory.artifactory.svc:8081/container
       container-image-push-repository: spring-petclinic
-      tls-verify: false
+      dest-tls-verify: false
 
   deploy:
   - implementer: ArgoCDDeploy
