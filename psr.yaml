@@ -20,8 +20,8 @@ step-runner-config:
   push-container-image:
   - implementer: Skopeo
     config:
-      destination-url: quay.io
-      container-image-push-repository: aagreen/spring-petclinic
+      destination-url: artifactory.artifactory.svc:8081/container
+      container-image-push-repository: spring-petclinic
 
   deploy:
   - implementer: ArgoCDDeploy
