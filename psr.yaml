@@ -22,8 +22,8 @@ step-runner-config:
   push-container-image:
   - implementer: Skopeo
     config:
-      destination-url: artifactory.artifactory.svc:8081/container
-      container-image-push-repository: spring-petclinic
+      destination-url: arti-direct-artifactory.apps.shqqs8fr.eastus.aroapp.io
+      container-image-push-repository: container/spring-petclinic
       dest-tls-verify: false
 
   deploy:
