@@ -16,6 +16,6 @@ permissions:
   pull-requests: write
 
 jobs:
-  minimal:
+  full:
     uses: ploigos/ploigos-github-workflows/.github/workflows/full.yaml@feature/full-workflow
     secrets: inherit
