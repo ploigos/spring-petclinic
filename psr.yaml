@@ -29,6 +29,11 @@ step-runner-config:
   create-container-image:
   - implementer: Buildah
 
+  container-image-static-compliance-scan:
+  - implementer: OpenSCAP
+    config:
+      oscap-input-definitions-uri: https://www.redhat.com/security/data/metrics/ds/v2/RHEL8/rhel-8.ds.xml.bz2
+
   push-container-image:
   - implementer: Skopeo
     config:
