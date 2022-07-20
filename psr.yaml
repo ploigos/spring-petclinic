@@ -33,6 +33,7 @@ step-runner-config:
   - implementer: OpenSCAP
     config:
       oscap-input-definitions-uri: https://www.redhat.com/security/data/metrics/ds/v2/RHEL8/rhel-8.ds.xml.bz2
+      oscap-profile: xccdf_org.ssgproject.content_profile_ospp
 
   push-container-image:
   - implementer: Skopeo
