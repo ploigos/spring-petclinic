@@ -33,7 +33,7 @@ step-runner-config:
       container-image-push-repository: ploigos/spring-petclinic
 
   sign-container-image:
-    - implementer: PodmanSign
+  - implementer: PodmanSign
     config:
       container-image-registry: ploigos2.jfrog.io
       container-image-repository: ploigos/spring-petclinic
