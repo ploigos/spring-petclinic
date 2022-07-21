@@ -32,7 +32,7 @@ step-runner-config:
   container-image-static-compliance-scan:
   - implementer: OpenSCAP
     config:
-      oscap-input-definitions-uri: https://www.redhat.com/security/data/metrics/ds/v2/RHEL8/rhel-8.ds.xml.bz2
+      oscap-input-definitions-uri: https://raw.githubusercontent.com/RedHatGov/rhel8-stig-latest/master/ssg-rhel8-ds.xml
       oscap-profile: xccdf_org.ssgproject.content_profile_ospp
 
   push-container-image:
