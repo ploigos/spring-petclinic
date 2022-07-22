@@ -35,7 +35,6 @@ step-runner-config:
   sign-container-image:
   - implementer: PodmanSign
     config:
-      signer-pgp-private-key: test
       container-image-registry: ploigos2.jfrog.io
       container-image-repository: ploigos/spring-petclinic
       container-image-signature-destination-url: ploigos2.jfrog.io/artifactory/container-signatures
