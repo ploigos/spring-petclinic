@@ -21,7 +21,7 @@ step-runner-config:
   - implementer: MavenDeploy
     config:
       maven-push-artifact-repo-id: maven-releases
-      maven-push-artifact-repo-url: https://nexus-devsecops.apps.n7qzypo3.eastus.aroapp.io/repository/maven-releases
+      maven-push-artifact-repo-url: http://nexus-sonatype-nexus-service.devsecops.svc.cluster.local:8081/repository/maven-releases
 
   create-container-image:
   - implementer: Buildah
@@ -59,4 +59,4 @@ step-runner-config:
   report:
   - implementer: ResultArtifactsArchive
     config:
-      results-archive-destination-url: https://nexus-docker-devsecops.apps.n7qzypo3.eastus.aroapp.io/repository/results-artifacts-archive
+      results-archive-destination-url: https://nexus-devsecops.apps.n7qzypo3.eastus.aroapp.io/repository/result-artifacts-archive
