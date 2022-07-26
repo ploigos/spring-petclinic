@@ -13,8 +13,6 @@ step-runner-config:
 
   tag-source:
   - implementer: Git
-    config:
-      git-username: aarongreen85
 
   unit-test:
     - implementer: MavenTest
