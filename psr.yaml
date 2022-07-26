@@ -13,6 +13,8 @@ step-runner-config:
 
   tag-source:
   - implementer: Git
+    config:
+      git-user-email: 'ploigos+it@redhat.com'
 
   unit-test:
     - implementer: MavenTest
