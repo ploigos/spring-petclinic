@@ -13,8 +13,6 @@ step-runner-config:
 
   generate-metadata:
   - implementer: Maven
-    config:
-      maven-no-transfer-progress: false
   - implementer: Git
   - implementer: SemanticVersion
 
@@ -22,9 +20,7 @@ step-runner-config:
   - implementer: Git
 
   unit-test:
-  - implementer: MavenTest
-    config:
-      maven-no-transfer-progress: false
+    - implementer: MavenTest
 
   package:
   - implementer: MavenPackage
