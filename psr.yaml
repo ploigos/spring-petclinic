@@ -5,6 +5,10 @@ step-runner-config:
     organization: ploigos
     service-name: petclinic
     application-name: petclinic
+    maven-mirrors:
+      id: maven-central
+      url: https://nexus-devsecops.apps.eekzz70r.eastus.aroapp.io/repository/maven-central
+      mirror-of: central
 
   generate-metadata:
   - implementer: Maven
