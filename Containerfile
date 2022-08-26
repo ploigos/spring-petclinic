@@ -1,4 +1,4 @@
-FROM nexus-docker-devsecops.apps.cluster-q7vt2.q7vt2.sandbox1639.opentlc.com/ploigos/openjdk-11
+FROM nexus-docker-devsecops.apps.cluster-hpt9v.hpt9v.sandbox277.opentlc.com/ploigos/openjdk-11
 
 USER 0
 
