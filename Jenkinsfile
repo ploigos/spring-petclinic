@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            label 'ploigos'
+        }
+    }
+
     stages {
         stage('Generate Metadata') {
             steps {
