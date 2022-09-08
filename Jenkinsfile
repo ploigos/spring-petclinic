@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'quay.io/ploigos/ploigos-github-runner'
+            image 'jenkins/agent'
         }
     }
 
