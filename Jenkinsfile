@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'jenkins/agent'
-        }
-    }
-
+    agent any
     stages {
         stage('Generate Metadata') {
             steps {
