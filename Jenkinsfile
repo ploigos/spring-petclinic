@@ -2,7 +2,7 @@ pipeline {
     stages {
         stage('Generate Metadata') {
             steps {
-                sh "psr -s unit-test -c psr.yaml"
+                sh "psr -s generate-metadata -c psr.yaml"
             }
         }
         stage('Unit Test') {
