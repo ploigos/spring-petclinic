@@ -1,8 +1,5 @@
 pipeline {
-    agent {
-        label 'ploigos'
-    }
-
+    agent any
     stages {
         stage('Generate Metadata') {
             steps {
