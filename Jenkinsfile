@@ -1,8 +1,6 @@
 pipeline {
     agent {
-        docker {
-            ploigos
-        }
+        label 'ploigos'
     }
 
     stages {
