@@ -27,8 +27,9 @@ This example application demonstrates how to use the Ploigos Step Runner (psr) a
   * Under "SCM" change the dropdown value from "None" to "Git"
   * For "Repository URL", enter "https://github.com/ploigos/spring-petclinic.git"
   * For "Branch Specifier", enter "feature/end-to-end"
-  * Under "Additional Behaviors", select "Add" and "Check out to specific local branch"
+  * Under "Additional Behaviors", select "Add" and then select "Check out to specific local branch" from the dropdown
   * Under "Branch name", enter "feature/end-to-end"
+  * Select "Add" *again* and then select "Clean before checkout" from the dropdown
   * *Uncheck* the checkbox for "Lightweight checkbox". Make sure the box is not checked.
   * Select "Save"
 * Run the pipeline to build the example application.
