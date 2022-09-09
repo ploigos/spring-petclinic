@@ -28,6 +28,8 @@ step-runner-config:
 
   create-container-image:
   - implementer: Buildah
+    config:
+      containers-config-auth-file: /var/jenkins_home/container-auth.json
 
   container-image-static-vulnerability-scan:
   - implementer: OpenSCAP

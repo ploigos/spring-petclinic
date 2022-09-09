@@ -3,19 +3,18 @@ This example application demonstrates how to use the Ploigos Step Runner (psr) a
 
 ## Instructions
 * Build the custom container image provided for running Jenkins
-  * `buildah bud -t e2e-jenkins e2e-jenkins.Containerfile`
+  * `podman bud -t e2e-jenkins jenkins.Containerfile`
 * Start Jenkins
-  * `podman run --name=jenkins -d -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 --restart=on-failure e2e-jenkins`
-* View the Jenkins logs. Wait until it says "Jenkins is fully up and running"
-  * `podman logs -f jenkins`
+  * `podman run --name=jenkins -v jenkins_home:/var/jenkins_home -p 8080:8080 -p 50000:50000 --restart=on-failure e2e-jenkins`
+  * Wait until the log says "Jenkins is fully up and running"
 * Login to the container registry and save the credentials in the Jenkins container's mounted volume so that the psr can use them
-  * `podman exec -u jenkins -it jenkins podman login --authfile /var/jenkins_home/container-auth.json quay.io`
+  * `podman exec -u jenkins -it jenkins buildah login --authfile /var/jenkins_home/container-auth.json quay.io`
 * Retrieve the initial admin password for Jenkins
   * `podman exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword`
 * Perform the initial setup for Jenkins using the browser-based wizard
-  * Browse to http://localhost:8080
-  * Paste the value you copied
-  * Select "install suggested plugins". Wait.
+  * Browse to http://localhost:8080/
+  * Paste the value you copied.
+  * Select "install suggested plugins" and wait for the operation to complete
   * Select "Skip and continue as admin"
   * Select "Save and Finish"
   * Select "Start using Jenkins"
@@ -28,13 +27,13 @@ This example application demonstrates how to use the Ploigos Step Runner (psr) a
   * Under "SCM" change the dropdown value from "None" to "Git"
   * For "Repository URL", enter "https://github.com/ploigos/spring-petclinic.git"
   * For "Branch Specifier", enter "feature/end-to-end"
-  * Under "Additional Behaviors", enter "Check out to specific local branch"
+  * Under "Additional Behaviors", select "Add" and "Check out to specific local branch"
   * Under "Branch name", enter "feature/end-to-end"
   * *Uncheck* the checkbox for "Lightweight checkbox". Make sure the box is not checked.
   * Select "Save"
 * Run the pipeline to build the example application.
   * Select "Build now"
-  * Watch the pipeline stages turn green.
+  * The pipeline will run. You can monitor progress by watching the pipeline stages turn green. The pipeline may run for up to 10 minutes.
   * You can view the log and other build details by selecting the current build in the "Build History" area. Click the round icon to the left of "#1" to open the logs directly.
 
 ## What is happening when I run the example pipeline?
