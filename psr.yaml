@@ -24,7 +24,7 @@ step-runner-config:
   - implementer: MavenDeploy
     config:
       maven-push-artifact-repo-id: maven-releases
-      maven-push-artifact-repo-url: https://nexus-devsecops.apps.cluster-2k8k6.2k8k6.sandbox70.opentlc.com/repository/maven-releases
+      maven-push-artifact-repo-url: https://nexus-devsecops.apps.cluster-pn8ld.pn8ld.sandbox814.opentlc.com/repository/maven-releases
 
   create-container-image:
   - implementer: Buildah
@@ -46,13 +46,13 @@ step-runner-config:
   push-container-image:
   - implementer: Skopeo
     config:
-      destination-url: nexus-docker-devsecops.apps.cluster-2k8k6.2k8k6.sandbox70.opentlc.com
+      destination-url: nexus-docker-devsecops.apps.cluster-pn8ld.pn8ld.sandbox814.opentlc.com
       container-image-push-repository: ploigos/spring-petclinic
 
   sign-container-image:
   - implementer: PodmanSign
     config:
-      container-image-registry: nexus-docker-devsecops.apps.cluster-2k8k6.2k8k6.sandbox70.opentlc.com
+      container-image-registry: nexus-docker-devsecops.apps.cluster-pn8ld.pn8ld.sandbox814.opentlc.com
       container-image-repository: ploigos/spring-petclinic
       container-image-signature-destination-url: https://nexus-devsecops.apps.cluster-2k8k6.2k8k6.sandbox70.opentlc.com/repository/container-image-signatures
 
@@ -82,4 +82,4 @@ step-runner-config:
   report:
   - implementer: ResultArtifactsArchive
     config:
-      results-archive-destination-url: https://nexus-devsecops.apps.cluster-2k8k6.2k8k6.sandbox70.opentlc.com/repository/result-artifacts-archive
+      results-archive-destination-url: https://nexus-devsecops.apps.cluster-pn8ld.pn8ld.sandbox814.opentlc.com/repository/result-artifacts-archive
