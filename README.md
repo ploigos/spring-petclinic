@@ -43,3 +43,7 @@ This example application demonstrates how to use the Ploigos Step Runner (psr) a
   * The psr command consults the psr.yaml configuration file. For this example, the psr command has been installed directly into the Jenkins container for simplicity. It is good practice to use a separate container in production.
   * During each stage, the psr command invokes other commands (external tools). These commands have also been installed into the Jenkins container. The exernal tools include git, mvn, and buildah.
 
+## Instructions for building the ploigos-and-tools agent image
+* buildah bud -t quay.io/dwinchell_redhat/ploigos-and-tools:latest ploigos-and-tools.Containerfile 
+* buildah push quay.io/dwinchell_redhat/ploigos-and-tools:latest
+
