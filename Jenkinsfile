@@ -40,7 +40,9 @@ spec:
     stages {
         stage('Generate Metadata') {
             steps {
-                sh "psr -s generate-metadata -c psr.yaml"
+                container('default') {
+                    sh "psr -s generate-metadata -c psr.yaml"
+                }
             }
         }
         stage('Unit Test') {
