@@ -27,6 +27,11 @@ pipeline {
                 sh "psr -s create-container-image -c psr.yaml"
             }
         }
+        stage('Push Container Image') {
+            steps {
+                sh "psr -s push-container-image -c psr.yaml"
+            }
+        }
     }
 }
 
