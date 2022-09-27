@@ -24,7 +24,6 @@
     <webjars-font-awesome.version>4.7.0</webjars-font-awesome.version>
 
     <jacoco.version>0.8.7</jacoco.version>
-    <nohttp-checkstyle.version>0.0.10</nohttp-checkstyle.version>
     <spring-format.version>0.0.31</spring-format.version>
 
   </properties>
@@ -309,20 +308,6 @@
               <version>1.0.0</version>
               <configuration>
                 <lifecycleMappingMetadata>
-                  <pluginExecutions>
-                    <pluginExecution>
-                      <pluginExecutionFilter>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-checkstyle-plugin</artifactId>
-                        <versionRange>[1,)</versionRange>
-                        <goals>
-                          <goal>check</goal>
-                        </goals>
-                      </pluginExecutionFilter>
-                      <action>
-                        <ignore />
-                      </action>
-                    </pluginExecution>
                     <pluginExecution>
                       <pluginExecutionFilter>
                         <groupId>org.springframework.boot</groupId>
