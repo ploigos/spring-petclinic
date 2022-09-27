@@ -7,6 +7,7 @@ apiVersion: v1
 kind: Pod
 spec:
     serviceAccount: jenkins
+    defaultContainer: default
     containers:
     - name: 'jnlp'
       image: "ploigos/ploigos-ci-agent-jenkins:latest"
@@ -40,9 +41,7 @@ spec:
     stages {
         stage('Generate Metadata') {
             steps {
-                container('default') {
-                    sh "psr -s generate-metadata -c psr.yaml"
-                }
+                sh "psr -s generate-metadata -c psr.yaml"
             }
         }
         stage('Unit Test') {
