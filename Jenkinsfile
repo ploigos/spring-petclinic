@@ -5,11 +5,6 @@ pipeline {
             yaml """
 apiVersion: v1
 kind: Pod
-metadata:
-    labels:
-        git-repo-name: 'spring-petclinic'
-        git-branch-name: 'feature_end-to-end'
-        jenkins-build-id: ${env.BUILD_ID}
 spec:
     serviceAccount: jenkins
     containers:
