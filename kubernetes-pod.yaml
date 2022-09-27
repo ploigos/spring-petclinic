@@ -10,22 +10,12 @@ spec:
       - mountPath: '/home/ploigos'
         name: home-ploigos
     - name: 'default'
-      image: "ploigos/ploigos-tool-maven:latest"
+      image: 'quay.io/dwinchell_redhat/ploigos-and-tools:latest'
       tty: true
-      volumeMounts:
-      - mountPath: '/home/ploigos'
-        name: home-ploigos
-    - name: 'buildah'
-      image: 'ploigos/ploigos-tool-containers:latest'
-      tty: true
-      securityContext:
-        capabilities:
-            add:
-            - 'SETUID'
-            - 'SETGID'
       volumeMounts:
       - mountPath: '/home/ploigos'
         name: home-ploigos
     volumes:
     - name: home-ploigos
       emptyDir: {}
+
