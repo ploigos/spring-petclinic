@@ -6,6 +6,11 @@ step-runner-config:
     service-name: petclinic
     application-name: petclinic
 
+    container-registries:
+      nexus-docker-devsecops.apps.mqrik2lw.eastus.aroapp.io:
+        username: ploigos
+        password: UtlY8a1X8wAfTXv1
+
   generate-metadata:
   - implementer: Maven
   - implementer: Git
@@ -25,6 +30,6 @@ step-runner-config:
   push-container-image:
   - implementer: Skopeo
     config:
-      destination-url: nexus-docker-devsecops.apps.cluster-2k8k6.2k8k6.sandbox70.opentlc.com
+      destination-url: nexus-docker-devsecops.apps.mqrik2lw.eastus.aroapp.io
       container-image-push-repository: ploigos/spring-petclinic
 
