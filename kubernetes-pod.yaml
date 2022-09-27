@@ -9,7 +9,7 @@ spec:
       - mountPath: '/home/ploigos'
         name: home-ploigos
     - name: 'default'
-      image: 'quay.io/dwinchell_redhat/ploigos-and-tools:latest'
+      image: 'quay.io/ploigos/ploigos-github-runner:latest'
       tty: true
       volumeMounts:
       - mountPath: '/home/ploigos'
