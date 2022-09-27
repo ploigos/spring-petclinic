@@ -2,12 +2,12 @@ pipeline {
    agent {
         kubernetes {
             cloud 'openshift'
+            defaultContainer 'default'
             yaml """
 apiVersion: v1
 kind: Pod
 spec:
     serviceAccount: jenkins
-    defaultContainer: default
     containers:
     - name: 'jnlp'
       image: "ploigos/ploigos-ci-agent-jenkins:latest"
