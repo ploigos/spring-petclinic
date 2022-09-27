@@ -1,4 +1,4 @@
-FROM registry.access.redhat.com/ubi8:8
+FROM registry.access.redhat.com/ubi8:8.6
 
 ARG PLOIGOS_USER_UID=1001
 ARG PLOIGOS_USER_GID=0
