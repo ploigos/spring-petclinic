@@ -25,8 +25,6 @@ spec:
       volumeMounts:
       - mountPath: '/home/ploigos'
         name: home-ploigos
-      ${PLATFORM_MOUNTS}
-      ${TLS_MOUNTS}
     - name: 'buildah'
       image: 'ploigos/ploigos-tool-containers:latest'
       tty: true
