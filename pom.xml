@@ -140,9 +140,6 @@
           </execution>
         </executions>
         <configuration>
-          <includes>
-            <include>**/*IT.*</include>
-          </includes>
           <skipTests>false</skipTests>
           <systemProperties>
             <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
