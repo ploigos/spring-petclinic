@@ -17,7 +17,7 @@
 package org.springframework.samples.petclinic;
 
 import org.junit.jupiter.api.Test;
-import java.net.http;
+import java.net.http.HttpClient;
 
 public class ExampleIT {
 
