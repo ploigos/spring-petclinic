@@ -22,7 +22,7 @@ public class ExampleIT {
 
 	@Test
 	public void testExample() {
-		System.out.println("Placeholder test");
+		System.out.println("The target deployment url is " + System.getProperty("target.base.url") + ".");
 	}
 
 }
