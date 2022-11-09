@@ -17,12 +17,19 @@
 package org.springframework.samples.petclinic;
 
 import org.junit.jupiter.api.Test;
+import java.net.http;
 
 public class ExampleIT {
 
 	@Test
-	public void testExample() {
-		System.out.println("The target deployment url is " + System.getProperty("target.base.url") + ".");
+	public void get(String uri) throws Exception {
+		HttpClient httpClient = HttpClient.newHttpClient();
+		HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(System.getProperty("target.base.url")))
+				.timeout(Duration.ofSeconds(20)).build();
+
+		HttpResponse<String> httpResponse = httpClient.send(httpRequest, BodyHandlers.ofString());
+
+		System.out.println(http_response.body());
 	}
 
 }
