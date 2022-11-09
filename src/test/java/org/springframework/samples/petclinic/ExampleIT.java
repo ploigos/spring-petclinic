@@ -31,7 +31,7 @@ public class ExampleIT {
 
 		HttpResponse<String> httpResponse = httpClient.send(httpRequest, BodyHandlers.ofString());
 
-		System.out.println(http_response.body());
+		System.out.println(httpResponse.body());
 	}
 
 }
