@@ -17,6 +17,7 @@
 package org.springframework.samples.petclinic;
 
 import org.junit.jupiter.api.Test;
+import static java.time.Duration;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
@@ -29,7 +30,7 @@ public class SimpleHttpIT {
 	public void get(String uri) throws Exception {
 		HttpClient httpClient = HttpClient.newHttpClient();
 		HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(System.getProperty("target.base.url")))
-				.build();
+				timeout(Duration.ofSeconds(20)).build();
 
 		HttpResponse<String> httpResponse = httpClient.send(httpRequest, BodyHandlers.ofString());
 
