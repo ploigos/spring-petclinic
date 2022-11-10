@@ -17,24 +17,26 @@
 package org.springframework.samples.petclinic;
 
 import org.junit.jupiter.api.Test;
-import static java.time.Duration;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SimpleHttpIT {
 
 	@Test
-	public void get(String uri) throws Exception {
+	public void testGetBaseUrl() throws Exception {
+		String uri = System.getProperty("target.base.url");
 		HttpClient httpClient = HttpClient.newHttpClient();
-		HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(System.getProperty("target.base.url")))
-				timeout(Duration.ofSeconds(20)).build();
+		HttpRequest httpRequest = HttpRequest.newBuilder().uri(URI.create(uri)).build();
 
 		HttpResponse<String> httpResponse = httpClient.send(httpRequest, BodyHandlers.ofString());
 
-		System.out.println(httpResponse.body());
+		int actualStatusCode = httpResponse.statusCode();
+
+		assertEquals(200, actualStatusCode);
 	}
 
 }
