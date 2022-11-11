@@ -1,4 +1,4 @@
-FROM nexus-docker-devsecops.apps.cluster-2k8k6.2k8k6.sandbox70.opentlc.com/ploigos/openjdk-11
+FROM nexus-docker-devsecops.apps.sw3awyjo.eastus.aroapp.io/ploigos/openjdk-11
 
 USER 0
 
